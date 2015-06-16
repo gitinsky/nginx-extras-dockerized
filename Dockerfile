@@ -5,8 +5,8 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get -qq update \
   && apt-get -qq install -y software-properties-common \
   && add-apt-repository -y ppa:nginx/stable \
-  && apt-get -qq install -y nginx-extras \
-  && apt-get -qq pugre -y software-properties-common \
+  && apt-get -y install nginx-extras \
+  && apt-get -y pugre software-properties-common \
   && rm -vrf /var/cache/* /var/lib/apt/lists/* \
   && rm -vrf /etc/nginx/sites-enabled/* \
 
