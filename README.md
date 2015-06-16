@@ -6,14 +6,14 @@ sudo docker build -t gitinsky/nginx-extras https://github.com/gitinsky/nginx-ext
 
 tee nginx-simple-site.conf <<EOF
 server {
-  listen 8080;
+  listen 80;
 }
 EOF
 
 sudo docker run \
-  -v ./nginx-log:/var/log/nginx \
-  -v ./nginx-simple-site.conf:/etc/nginx/sites-enabled/nginx-simple-site.conf \
-  -p 8080:8080 \
+  -v $(pwd)/nginx-log:/var/log/nginx \
+  -v $(pwd)/nginx-simple-site.conf:/etc/nginx/sites-enabled/nginx-simple-site.conf \
+  -p 8080:80 \
   gitinsky/nginx-extras
 ```
 
