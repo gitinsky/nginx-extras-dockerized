@@ -9,6 +9,6 @@ RUN apt-get update \
   && apt-get -y pugre software-properties-common \
   && rm -vrf /var/cache/* /var/lib/apt/lists/* \
   && rm -vrf /etc/nginx/sites-enabled/* \
-
+  && true
 
 CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
