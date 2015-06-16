@@ -7,7 +7,7 @@ RUN apt-get update \
   && add-apt-repository -y ppa:nginx/stable \
   && apt-get update \
   && apt-get -y install nginx-extras \
-  && apt-get purge software-properties-common \
+  && apt-get -y purge software-properties-common \
   && rm -vrf /var/cache/* /var/lib/apt/lists/* \
   && rm -vrf /etc/nginx/sites-enabled/* \
   && true
