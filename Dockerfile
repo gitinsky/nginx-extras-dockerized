@@ -2,8 +2,8 @@ FROM ubuntu:14.04.2
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get -qq update \
-  && apt-get -qq install -y software-properties-common \
+RUN apt-get update \
+  && apt-get install -y software-properties-common \
   && add-apt-repository -y ppa:nginx/stable \
   && apt-get -y install nginx-extras \
   && apt-get -y pugre software-properties-common \
