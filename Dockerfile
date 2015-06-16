@@ -10,4 +10,5 @@ RUN apt-get update \
   && rm -vrf /var/cache/* /var/lib/apt/lists/* \
   && rm -vrf /etc/nginx/sites-enabled/* \
 
+
 CMD ["/usr/sbin/nginx", "-g", "daemon off;"]
